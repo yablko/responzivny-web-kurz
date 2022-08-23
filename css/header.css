@@ -1,0 +1,110 @@
+header {
+    min-height: 100vh;
+
+    background-image: url('../images/crave_key_art_faded.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto 80%;
+    background-color: black;
+
+    display: flex;
+    align-items: flex-end;
+}
+
+.main-nav {
+    width: 100vw;
+    background: rgba(0, 0, 0, .5);
+
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+}
+
+.main-nav ul {
+    font-size: clamp(1.35rem, 6vw, 2.75rem);
+    line-height: 1;
+
+    display: flex;
+    gap: clamp(0.85rem, 4vw, 2rem);
+}
+
+.main-nav a {
+    display: block;
+    padding-top: 0.7rem;
+    padding-bottom: 0.35rem;
+
+    /* FANCY CORNERS */
+    /* padding-top: 2rem;
+	padding-bottom: 2.5rem; */
+}
+
+.main-nav .steam {
+    width: 3em;
+    padding-left: 0.5rem;
+    vertical-align: middle;
+    display: none;
+}
+
+.main-nav li {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav li:last-of-type {
+    margin-left: auto;
+}
+
+
+/* FANCY CORNERS */
+
+/* .main-nav .container {
+	background-image: url('../images/cornerl.png'), url('../images/cornerr.png');
+	background-repeat: no-repeat;
+	background-position: 0% 0.25rem, 100% 0.25rem;
+	background-size: 12rem;
+	padding: 0 3rem;
+} */
+
+
+/* RESPONSIVE */
+@media screen and (min-width: 420px) {
+
+    header {
+        background-size: cover;
+    }
+
+}
+
+@media screen and (min-width: 840px) {
+
+    /* and (orientation: portrait) */
+
+    .crave-logo {
+        flex: 100%;
+        position: relative;
+        left: -68px;
+    }
+
+    .main-nav .steam {
+        display: inline-block;
+    }
+
+}
+
+@media screen and (max-width: 840px) and (orientation: landscape) {
+
+    .main-nav ul {
+        font-size: clamp(1.15rem, 4vw, 2rem);
+    }
+
+    .crave-logo {
+        text-align: center;
+        position: relative;
+        top: 2rem;
+    }
+
+    .crave-logo img {
+        width: 75%;
+    }
+
+}
