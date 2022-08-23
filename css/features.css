@@ -1,0 +1,79 @@
+main {
+    background: var(--bg-secondary);
+    padding: 4rem 0;
+    position: relative;
+}
+
+.feature {
+    margin-bottom: 4rem;
+    /* background: rgba(0,0,0,0.25); */
+}
+
+.feature:last-of-type {
+    margin-bottom: 0;
+}
+
+.feature h2 {
+    color: var(--cl-accent);
+    text-shadow: 2px 2px 0 black;
+}
+
+.feature h3 {
+    text-shadow: 1px 1px 0 black;
+}
+
+.feature:not(.wishlist) .content {
+    position: relative;
+    bottom: 2rem;
+}
+
+.feature img {
+    border: 1px solid #000;
+}
+
+
+/* TODO: fix phone */
+.wishlist iframe {
+    margin-top: 2rem;
+    width: min(646px, 100%);
+    min-height: 190px;
+}
+
+
+/* RESPONSIVE */
+@media screen and (min-width: 810px) {
+
+    main {
+        padding: 10rem 0;
+    }
+
+    .feature {
+        display: flex;
+        align-items: center;
+        gap: 3vw;
+
+        margin-bottom: 10rem;
+        padding: 1rem 0;
+        border-right: .75rem solid var(--cl-accent);
+    }
+
+    .feature:nth-child(even) {
+        flex-direction: row-reverse;
+        border-left: .75rem solid var(--cl-accent);
+        border-right: none;
+    }
+
+    .feature figure {
+        flex: 7;
+    }
+
+    .feature .content {
+        flex: 3;
+        padding: 0 2rem;
+    }
+
+    .feature:not(.wishlist) .content {
+        position: static;
+    }
+
+}

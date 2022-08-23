@@ -1,0 +1,41 @@
+/* main::before,
+footer::before {
+	content: '';
+
+	background-image:
+		linear-gradient(319deg, var(--bg-secondary) 16px, transparent 17px),
+		linear-gradient(39deg, var(--bg-secondary) 16px, transparent 17px);
+	background-size: 48px 23px;
+	background-repeat: repeat-x;
+
+	display: block;
+	width: 100%;
+	height: 100px;
+
+	position: absolute;
+	left: 0px;
+	top: -23px;
+}
+
+footer::before {
+	background-image:
+		linear-gradient(319deg, black 16px, transparent 17px),
+		linear-gradient(39deg, black 16px, transparent 17px);
+} */
+
+#mce-success-response {
+    color: yellow;
+}
+
+.box {
+    box-shadow:
+        0 1px 1px hsl(0deg 0% 0% / 0.075),
+        0 2px 2px hsl(0deg 0% 0% / 0.075),
+        0 4px 4px hsl(0deg 0% 0% / 0.075),
+        0 8px 8px hsl(0deg 0% 0% / 0.075),
+        0 16px 16px hsl(0deg 0% 0% / 0.075);
+}
+
+.rounded {
+    border-radius: 0.5rem;
+}

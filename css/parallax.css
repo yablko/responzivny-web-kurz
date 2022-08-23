@@ -1,0 +1,492 @@
+:root {
+    --scroll-bar-width: 8px;
+}
+
+::-webkit-scrollbar {
+    width: var(--scroll-bar-width);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: var(--scroll-bar-width);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #333;
+}
+
+html {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.content-wrapper {
+    margin: 0;
+    height: 100vh;
+    perspective: 1px;
+    /* minus scrollbar */
+    perspective-origin: calc(50% - var(--scroll-bar-width) / 2) center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    --scroll-behavior: smooth;
+}
+
+.parallax {
+    transform-style: preserve-3d;
+    display: block;
+    position: relative;
+    z-index: 0;
+    height: 328vw;
+}
+
+@media (orientation: portrait) {
+    .parallax {
+        height: 510vw;
+    }
+}
+
+[class^=prlx-obj] {
+    position: absolute;
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prlx-obj-black-top {
+    background: black;
+    width: 100vw;
+    height: 57.1428571429vw;
+    transform: translate3d(-50%, -50%, -0.41px) scale(1.41);
+    left: 50vw;
+    top: -35vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-black-top {
+        transform: translate3d(-50%, -50%, -1.41px) scale(2.41);
+        left: 50vw;
+        top: -90vw;
+    }
+}
+
+.prlx-obj-top-gradient {
+    background: linear-gradient(black 30%, rgba(0, 0, 0, 0));
+    width: 100vw;
+    height: 42.8571428571vw;
+    transform: translate3d(-50%, -50%, 0px) scale(1);
+    left: 50vw;
+    top: 14vw;
+}
+
+.prlx-obj-viaduct {
+    background: url('../images/bg/viaduct-min.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 250.3571428571vw;
+    transform: translate3d(-50%, -50%, -0.41px) scale(1.41);
+    left: 50vw;
+    top: 160.2vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-viaduct {
+        transform: translate3d(-50%, -50%, -1.41px) scale(2.41);
+        left: 50vw;
+        top: 280.2vw;
+    }
+}
+
+.prlx-obj-bg-sky {
+    background: url('../images/bg/background-sky-min.jpeg') no-repeat center center;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 181.2142857143vw;
+    transform: translate3d(-50%, -50%, -1.91px) scale(2.91);
+    left: 50vw;
+    top: 73vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-bg-sky {
+        transform: translate3d(-50%, -50%, -2.91px) scale(3.91);
+        left: 50vw;
+        top: 73vw;
+    }
+}
+
+.prlx-obj-cloud-1 {
+    background: url('../images/bg/cloud-1-min.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 25.9285714286vw;
+    height: 12.2142857143vw;
+    transform: translate3d(-50%, -50%, -0.11px) scale(1.11);
+    left: 8.93vw;
+    top: 45vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-cloud-1 {
+        transform: translate3d(-50%, -50%, -0.76px) scale(1.76);
+        left: -15.12vw;
+        top: 80vw;
+    }
+}
+
+.prlx-obj-cloud-2 {
+    background: url('../images/bg/cloud-2-min.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 57.2857142857vw;
+    height: 24.7857142857vw;
+    transform: translate3d(-50%, -50%, -0.21px) scale(1.21);
+    left: 75.41vw;
+    top: 73vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-cloud-2 {
+        transform: translate3d(-50%, -50%, -0.31px) scale(1.31);
+        left: 77.51vw;
+        top: 128vw;
+    }
+}
+
+.prlx-obj-cloud-3 {
+    background: url('../images/bg/cloud-3-min.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 55.2142857143vw;
+    height: 26.7142857143vw;
+    transform: translate3d(-50%, -50%, -0.16px) scale(1.16);
+    left: 23.32vw;
+    top: 174.65vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-cloud-3 {
+        transform: translate3d(-50%, -50%, -0.51px) scale(1.51);
+        left: 15.27vw;
+        top: 274.65vw;
+    }
+}
+
+.prlx-obj-hills {
+    background: url('../images/bg/hills-min.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 114.2857142857vw;
+    transform: translate3d(-50%, -50%, -1.21px) scale(2.21);
+    left: 50vw;
+    top: 235vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-hills {
+        transform: translate3d(-50%, -50%, -2.21px) scale(3.21);
+        left: 50vw;
+        top: 420vw;
+        z-index: -3;
+    }
+}
+
+.prlx-obj-bg-item-1 {
+    background: url('../images/bg/bg-item-1-min.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 38.4285714286vw;
+    height: 19.8571428571vw;
+    transform: translate3d(-50%, -50%, -0.53px) scale(1.53);
+    left: 27.05vw;
+    top: 29.5vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-bg-item-1 {
+        transform: translate3d(-50%, -50%, -1.53px) scale(2.53);
+        left: 12.05vw;
+        top: 54.5vw;
+    }
+}
+
+.prlx-obj-bg-item-2 {
+    background: url('../images/bg/bg-item-2-min.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 10.7857142857vw;
+    height: 8.4821428571vw;
+    transform: translate3d(-50%, -50%, -0.52px) scale(1.52);
+    left: 103.2vw;
+    top: 23vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-bg-item-2 {
+        transform: translate3d(-50%, -50%, -1.52px) scale(2.52);
+        left: 138.2vw;
+        top: 43vw;
+    }
+}
+
+.prlx-obj-bg-item-3 {
+    background: url('../images/bg/bg-item-3-min.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 10.2142857143vw;
+    height: 40.3571428571vw;
+    transform: translate3d(-50%, -50%, -0.81px) scale(1.81);
+    left: 11.085vw;
+    top: 80vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-bg-item-3 {
+        transform: translate3d(-50%, -50%, -1.81px) scale(2.81);
+        left: -10.415vw;
+        top: 125vw;
+    }
+}
+
+.prlx-obj-bg-item-4 {
+    background: url('../images/bg/bg-item-4-min.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 9.5vw;
+    height: 18.4285714286vw;
+    transform: translate3d(-50%, -50%, -0.91px) scale(1.91);
+    left: 135.759vw;
+    top: 107vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-bg-item-4 {
+        transform: translate3d(-50%, -50%, -1.91px) scale(2.91);
+        left: 180.659vw;
+        top: 212vw;
+    }
+}
+
+.prlx-obj-water {
+    background: url('../images/bg/water-min.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 60.2857142857vw;
+    transform: translate3d(-50%, -50%, -0.52px) scale(1.52);
+    left: 50vw;
+    top: 325.5vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-water {
+        transform: translate3d(-50%, -50%, -1.52px) scale(2.52);
+        left: 50vw;
+        top: 566.5vw;
+        z-index: -1;
+    }
+}
+
+.prlx-obj-trench-behind-lake {
+    background: url('../images/bg/trench-behind-lake-min.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 27.3571428571vw;
+    transform: translate3d(-50%, -50%, -0.91px) scale(1.91);
+    left: 50vw;
+    top: 250vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-trench-behind-lake {
+        transform: translate3d(-50%, -50%, -1.91px) scale(2.91);
+        left: 50vw;
+        top: 450vw;
+        z-index: -2;
+    }
+}
+
+.prlx-obj-island {
+    background: url('../images/bg/island-min.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 56.9285714286vw;
+    height: 27.7857142857vw;
+    transform: translate3d(-50%, -50%, -0.76px) scale(1.76);
+    left: 14.8vw;
+    top: 243vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-island {
+        transform: translate3d(-50%, -50%, -1.76px) scale(2.76);
+        left: -5.2vw;
+        top: 433vw;
+        z-index: -1;
+    }
+}
+
+.prlx-obj-garbage-island {
+    background: url('../images/bg/garbage-island-min.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 23.1428571429vw;
+    height: 10.6428571429vw;
+    transform: translate3d(-50%, -50%, -0.65px) scale(1.65);
+    left: 89.6vw;
+    top: 267vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-garbage-island {
+        transform: translate3d(-50%, -50%, -1.65px) scale(2.65);
+        left: 113.6vw;
+        top: 472vw;
+        z-index: -1;
+    }
+}
+
+.prlx-obj-garbage-island-small {
+    background: url('../images/bg/garbage-island-small-min.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 14.8571428571vw;
+    height: 8.7857142857vw;
+    transform: translate3d(-50%, -50%, -0.62px) scale(1.62);
+    left: 23.27vw;
+    top: 270.5vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-garbage-island-small {
+        transform: translate3d(-50%, -50%, -1.62px) scale(2.62);
+        left: 6.77vw;
+        top: 475.5vw;
+        z-index: -1;
+    }
+}
+
+.prlx-obj-on-the-water {
+    background: url('../images/bg/on-the-water-min.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 65.8571428571vw;
+    height: 10.2857142857vw;
+    transform: translate3d(-50%, -50%, -0.33px) scale(1.33);
+    left: 39.36vw;
+    top: 296vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-on-the-water {
+        transform: translate3d(-50%, -50%, -1.33px) scale(2.33);
+        left: 31.36vw;
+        top: 516vw;
+    }
+}
+
+.prlx-obj-dead-pig {
+    background: url('../images/bg/dead-pig-min.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 25.5vw;
+    height: 7.7142857143vw;
+    transform: translate3d(-50%, -50%, -0.36px) scale(1.36);
+    left: 100.32vw;
+    top: 290.5vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-dead-pig {
+        transform: translate3d(-50%, -50%, -1.36px) scale(2.36);
+        left: 137.32vw;
+        top: 507.5vw;
+    }
+}
+
+.prlx-obj-tram-bench {
+    background: url('../images/bg/tram-bench-min.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 42.4285714286vw;
+    height: 16.0714285714vw;
+    transform: translate3d(-50%, -50%, -0.245px) scale(1.245);
+    left: 84.86vw;
+    top: 295.95vw;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-tram-bench {
+        transform: translate3d(-50%, -50%, -1.245px) scale(2.245);
+        left: 112.86vw;
+        top: 512.95vw;
+    }
+}
+
+.prlx-obj-foreground {
+    background: url('../images/bg/foreground-min.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 85.7142857143vw;
+    transform: translate3d(-50%, -50%, -0.01px) scale(1.01);
+    left: 50vw;
+    top: 308vw;
+    box-sizing: content-box;
+}
+
+@media (orientation: portrait) {
+    .prlx-obj-foreground {
+        transform: translate3d(-50%, -50%, -0.42px) scale(1.42);
+        left: 50vw;
+        top: 538vw;
+        border-bottom: 50vw solid black;
+    }
+}
+
+.features.container {
+    position: relative;
+    top: 50%;
+    transform: translate3d(0, -50%, 0px) scale(1);
+}
+
+.features.container .feature {
+    scroll-margin-top: 6rem;
+    margin-bottom: 30rem;
+}
+
+@media (max-width: 1600px) {
+    .features.container .feature {
+        margin-bottom: 20rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .features.container .feature {
+        margin-bottom: 10rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .features.container .feature {
+        margin-bottom: 5rem;
+    }
+}
+
+main {
+    display: contents;
+    background: none;
+}
+
+main::before {
+    display: none;
+}
+
+/* footer,
+header {
+    z-index: 1;
+    position: relative;
+    transform-style: preserve-3d;
+    background-color: black;
+}*/
+
+footer, header {
+    z-index: 1;
+    position: relative;
+    transform-style: preserve-3d;
+    background-color: black;
+}
