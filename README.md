@@ -10,10 +10,10 @@ Patróni majú všetky videá skôr, kurzy dostanú aj ako text, zopár exkluzí
 
 ---
 
-### ✨ RESPONZÍVNY WEB OD NULY za 2 hodiny (naučím ťa!) 2h 29m 39s  
-:: https://youtu.be/
+### ✨ RESPONZÍVNY WEB pre klienta ZA 2 HODINY (naučím ťa!) 2h 29m 39s  
+:: https://youtu.be/m6tE_bgi3qo
   
-[![youtube tutorial link](images/responsive-web.jpg)](https://youtu.be/)  
+[![youtube tutorial link](images/crave_kurz_t.jpg)](https://youtu.be/m6tE_bgi3qo)  
   
 --- 
   
