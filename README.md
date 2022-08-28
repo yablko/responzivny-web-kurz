@@ -13,7 +13,7 @@ Patróni majú všetky videá skôr, kurzy dostanú aj ako text, zopár exkluzí
 ### ✨ RESPONZÍVNY WEB pre klienta ZA 2 HODINY (naučím ťa!) 2h 29m 39s  
 :: https://youtu.be/m6tE_bgi3qo
   
-[![youtube tutorial link](images/crave_kurz_t.jpg)](https://youtu.be/m6tE_bgi3qo)  
+[![youtube tutorial link](images/crave_kurz_thumb.jpg)](https://youtu.be/m6tE_bgi3qo)  
   
 --- 
   
